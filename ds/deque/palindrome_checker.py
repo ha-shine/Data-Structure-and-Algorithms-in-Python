@@ -1,3 +1,4 @@
+# https://en.wikipedia.org/wiki/Palindrome
 from deque import Deque
 
 def solve(word):
