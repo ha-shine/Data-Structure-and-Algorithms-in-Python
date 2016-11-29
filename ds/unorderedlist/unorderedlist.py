@@ -50,9 +50,11 @@ class UnorderedList:
         while not found:
             if current.getData() == item:
                 found = True
-            else:
+            elif current.getNext() != None:
                 previous = current
                 current = current.getNext()
+            else:
+                raise IndexError("Item not found")
 
         if previous = None:
             self.head = current.getNext()
