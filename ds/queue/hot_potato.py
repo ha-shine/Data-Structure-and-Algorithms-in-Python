@@ -1,3 +1,4 @@
+# https://en.wikipedia.org/wiki/Hot_potato_(game)
 from queue import Queue
 
 def play(nameList, num):
