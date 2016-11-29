@@ -20,6 +20,10 @@ class UnorderedList:
 
     def __init__(self):
         self.head = None
+        self.length = 0
+
+    def length(self):
+        return self.length
 
     def isEmpty(self):
         return self.head == None
@@ -28,15 +32,7 @@ class UnorderedList:
         temp = Node(item)
         temp.setNext(self.head)
         self.head = temp
-
-    def size(self):
-        current = self.head
-        size = 0
-        while current != None:
-            size += 1
-            current = current.getNext()
-
-        return size
+        self.length += 1
 
     def search(self, item):
         current = self.head
@@ -62,3 +58,4 @@ class UnorderedList:
             self.head = current.getNext()
         else:
             previous.setNext(current.getNext())
+        self.length -= 1
