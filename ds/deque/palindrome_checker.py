@@ -5,7 +5,10 @@ def solve(word):
     d = Deque()
 
     for char in word:
-        d.addRear(char)
+        if char == " ":
+            pass
+        else:
+            d.addRear(char)
 
     while d.size() > 1:
         front = d.removeFront()
